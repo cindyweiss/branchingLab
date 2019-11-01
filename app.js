@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
   var myArray = [];
   var sumAnswer = a + b;
   myArray[0] = sumAnswer
-  var result = `The sum of ${a} and ${b} is ${sumAnswer}.`
+  var result = `The sum of ${a} and ${b} is ${sumAnswer}.`;
   myArray[1] = result;
   return myArray;
 }
