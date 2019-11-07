@@ -87,6 +87,8 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
+
 /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -100,12 +102,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var q4 = [];
+  var answer = sum(sumArr[0], sumArr[1]);
+  var answer2 = sum(answer[0], sumArr[2]);
+  q4.push(answer2[0]);
+  q4.push(`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${q4[0]} is their sum.`)
+  return q4;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
