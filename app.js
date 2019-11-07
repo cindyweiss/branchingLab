@@ -19,7 +19,7 @@ function sum(a, b) { //eslint-disable-line
 }
 
 // Here is the test for sum(); uncomment it to run it
-//testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -36,14 +36,14 @@ function multiply(a, b) { //eslint-disable-line
   var myArray = [];
   var multiplyAnswer = a * b;
   myArray[0] = multiplyAnswer;
-  var result = `The multiply of ${a} and ${b} is ${multiplyAnswer}`;
+  var result = `The product of ${a} and ${b} is ${multiplyAnswer}.`;
   myArray[1] = result;
-  return myArray; PerfWidgetExternal
+  return myArray;
 }
 
 // Here is the test for multiply(); uncomment it to run it
 
-//testMultiply(5,9);
+testMultiply(5, 9);
 
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
@@ -82,11 +82,13 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4, 7, 5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
+
+
 /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
@@ -100,12 +102,17 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  var q4 = [];
+  var answer = sum(sumArr[0], sumArr[1]);
+  var answer2 = sum(answer[0], sumArr[2]);
+  q4.push(answer2[0]);
+  q4.push(`${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${q4[0]} is their sum.`)
+  return q4;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -121,11 +128,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var q5 = [];
+  var answer = multiply(multArr[0], multArr[1]);
+  var answer2 = multiply(answer[0], multArr[2]);
+  q5.push(answer2[0]);
+  q5.push(`The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${q5[0]}.`);
+  return q5;
 }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+//Here is the test for multiplyArray(); uncomment it to run it
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
